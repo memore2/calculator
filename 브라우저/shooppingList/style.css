@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background-image: url("./img/flowers-6601327.png");
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.shoopingApp {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 50vw;
+  height: 65vh;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border: 1px solid;
+  transform: translateX(35px);
+}
+
+.shoopingApp-title {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  color: white;
+  padding: 10px 0;
+  background: linear-gradient(60deg, #cc40d6, #00a4ff, rgb(255, 150, 255));
+}
+.shoopingApp-content {
+  height: 78%;
+  overflow-y: auto;
+  background-color: #ffe8f7;
+}
+.shoopingApp-content li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5px;
+  font-size: 20px;
+}
+.shoopingApp-content li i {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.shoopingApp-content li i:hover {
+  color: red;
+  transform: scale(1.1);
+}
+.shoopingApp__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: linear-gradient(60deg, #cc40d6, #00a4ff, rgb(255, 150, 255));
+}
+.shoopingApp__footer-saveBtn {
+  background-color: black;
+  color: white;
+  top: 5px;
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in;
+  cursor: pointer;
+}
+.shoopingApp__footer-saveBtn:hover {
+  transform: scale(1.1);
+}
+.shoopingApp__footer-saveBtn i {
+  font-size: 20px;
+}
+
+input {
+  padding: 8px;
+  width: 100%;
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: black;
+        height: 500vh;
+        /* overflow:hidden; */
+      }
+      div {
+        background-color: burlywood;
+        width: 100px;
+        height: 100px;
+        margin-bottom: 5px;
+      }
+      div:nth-child(8) {
+        background-color: chocolate;
+      }
+      section {
+        right: 10px;
+        position: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="button">
+      <button>Scroll by 100px(y)</button>
+      <button>Scroll to 100px(y)</button>
+      <button>Scroll into special</button>
+    </section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="click"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <script>
+      const box = document.querySelectorAll("button");
+      const click = document.querySelector(".click");
+
+      function boxEvent(event) {
+        const scroll = event.target;
+        switch (scroll) {
+          case box[0]:
+            window.scrollBy({ top: 100, left: 0, behavior: "smooth" });
+            break;
+          case box[1]:
+            window.scrollTo(0, 0);
+            break;
+          case box[2]:
+            click.scrollIntoView();
+            break;
+        }
+      }
+      box.forEach((target) => {
+        target.addEventListener("click", boxEvent);
+      });
+    </script>
+  </body>
+</html>
